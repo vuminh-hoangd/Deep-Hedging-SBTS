@@ -60,3 +60,85 @@ which are then used to train the deep hedging model via a Deep Neural Network.
 strategy trained on SBTS-generated scenarios vs real GOOGL price data.
 
 ![PnL GOOGL](https://raw.githubusercontent.com/vuminh-hoangd/Deep-Hedging-SBTS/main/PnL-googl-test.png)
+
+## Repository Structure
+
+```text
+.
+├── DeepHedging/
+│   ├── DataGenerator.py
+│   └── DeepHedging.py
+├── metrics/
+│   ├── fbm_stock_metrics/
+│   │   ├── configs/
+│   │   │   ├── config.py
+│   │   │   ├── evaluation_config_fBM.yaml
+│   │   │   └── evaluation_config_Stock.yaml
+│   │   ├── data/
+│   │   │   ├── X_fBM.pt
+│   │   │   └── X_stock.pt
+│   │   └── src/
+│   │       ├── evaluations/
+│   │       │   ├── augmentations.py
+│   │       │   ├── eval_helper.py
+│   │       │   ├── evaluations.py
+│   │       │   ├── hypothesis_test.py
+│   │       │   ├── loss.py
+│   │       │   ├── metrics.py
+│   │       │   ├── plot.py
+│   │       │   ├── scores.py
+│   │       │   ├── summary.py
+│   │       │   └── test_metrics.py
+│   │       ├── base.py
+│   │       ├── train_regressor.py
+│   │       └── utils.py
+│   ├── discriminative_score.py
+│   ├── eval_functions.py
+│   ├── get_params.py
+│   └── predictive_score.py
+├── models/
+│   ├── hyperparams_selection/
+│   │   ├── markovian_optimal_multi.py
+│   │   └── markovian_optimal_uni.py
+│   ├── cv_sbts.py
+│   ├── sbts_multi.py
+│   ├── sbts_multi_markovian.py
+│   ├── sbts_uni.py
+│   └── sbts_uni_markovian.py
+├── models_weights/
+│   ├── aapl_data.weights.h5
+│   ├── aapl_sbts_mark.weights.h5
+│   ├── aapl_sbts_plain.weights.h5
+│   ├── googl_data.weights.h5
+│   ├── googl_sbts_mark.weights.h5
+│   ├── googl_sbts_plain.weights.h5
+│   ├── nvda_data.weights.h5
+│   ├── nvda_sbts_mark.weights.h5
+│   ├── nvda_sbts_plain.weights.h5
+│   ├── spy_data.weights.h5
+│   ├── spy_sbts_mark.weights.h5
+│   └── spy_sbts_plain.weights.h5
+├── notebooks/
+│   ├── DeepHedging(APPL).ipynb
+│   ├── DeepHedging (GGL).ipynb
+│   ├── DeepHedging (NVDA).ipynb
+│   └── DeepHedging (SPY).ipynb
+├── utils/
+│   ├── data_generation.py
+│   ├── data_loading.py
+│   ├── data_preprocessing.py
+│   └── data_stationarity.py
+├── requirements.txt
+└── PnL-googl-test.png
+
+## References
+
+1. **Nonparametric generative modeling for time series via Schrödinger bridge**  
+   Mohamed Hamdouche, Pierre Henry-Labordère, and Huyên Pham.  
+   *Journal of Machine Learning Research (JMLR)*, 27(112):1–23, 2026.  
+   [Link to paper](https://www.jmlr.org/papers/volume27/23-1162/23-1162.pdf)
+
+2. **Robust time series generation via Schrödinger Bridge: a comprehensive evaluation**  
+   Alexandre Alouadi, Baptiste Barreau, Laurent Carlier, and Huyên Pham.  
+   *Proceedings of the 6th ACM International Conference on AI in Finance (ICAIF '25)*, 2025.  
+   [arXiv:2503.02943](https://arxiv.org/abs/2503.02943)
