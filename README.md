@@ -63,6 +63,9 @@ strategy trained on SBTS-generated scenarios vs real GOOGL price data.
 
 ## Repository Structure
 
+<details>
+<summary><b>Click to expand full repository structure</b></summary>
+
 ```text
 .
 ├── DeepHedging/
@@ -130,8 +133,6 @@ strategy trained on SBTS-generated scenarios vs real GOOGL price data.
 │   └── data_stationarity.py
 ├── requirements.txt
 └── PnL-googl-test.png
-
-----
 
 ## References
 
