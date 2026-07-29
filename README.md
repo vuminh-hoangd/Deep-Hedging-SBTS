@@ -133,6 +133,11 @@ strategy trained on SBTS-generated scenarios vs real GOOGL price data.
 │   └── data_stationarity.py
 ├── requirements.txt
 └── PnL-googl-test.png
+```
+
+</details>
+
+---
 
 ## References
 
