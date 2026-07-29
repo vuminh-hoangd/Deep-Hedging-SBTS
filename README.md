@@ -131,6 +131,8 @@ strategy trained on SBTS-generated scenarios vs real GOOGL price data.
 ├── requirements.txt
 └── PnL-googl-test.png
 
+----
+
 ## References
 
 1. **Nonparametric generative modeling for time series via Schrödinger bridge**  
