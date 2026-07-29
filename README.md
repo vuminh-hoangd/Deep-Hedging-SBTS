@@ -11,4 +11,4 @@ $$\min_{\alpha} \text{KL}(\mathbb{P} | \mathbb{W}^\sigma ) = \min_{\alpha}  \fra
 
 such that $dX_t = \alpha_t dt + \sigma dW_t^{\mathbb{P}}$ with $W$ a Brownian motion
 under $\mathbb{P}$, $X_0 = \mathbf{0}$, and
-$(X_{t_1}, \cdots, X_{t_N}) \overset{\mathbb{P}}{\sim} \mu$.
+$(X_{t_1}, \cdots, X_{t_N}) \overset{\mathbb{P}}{\sim} \mu$. Once we learn the optimal drift $\alpha^\star*$, we can generate new time series samples via $\mathbb{P}^\star$: $dX_t = \alpha_t^\star dt + \sigma dW_t^{\mathbb{P}^\star}$ 
