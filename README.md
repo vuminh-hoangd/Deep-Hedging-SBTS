@@ -15,14 +15,7 @@ $(X_{t_1}, \cdots, X_{t_N}) \overset{\mathbb{P}}{\sim} \mu$. Once we learn the o
 
 ## Deep Hedging
 
-We consider the deep hedging of an ATM call option with payoff```
-
-</details>
-
----
-
-## References
-
+We consider the deep hedging of an ATM call option with payoff 
 $`g(S_T) = (S_T - S_0)^+`$.
 
 The goal is to minimize over the initial capital $`p`$ (premium) and
