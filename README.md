@@ -34,11 +34,7 @@ where the Profit and Loss is defined as:
 where $`p`$ is the initial premium collected, $`\Delta(t_i, S_{t_i})`$ is the
 hedge ratio (number of shares held) at time $`t_i`$, and $`g(S_T) = (S_T - S_0)^+`$
 is the option payoff at maturity.
-
-
-Think of this as:
-
-> **(money you have) = (money you started with) + (money you made/lost trading) − (money you have to pay out)**
+Think of this as: **(money you have) = (money you started with) + (money you made/lost trading) − (money you have to pay out)**.
 
 ## SBTS for Deep Hedging
 
@@ -53,7 +49,20 @@ The pipeline is:
 
 ### Results — Google (GOOGL) ATM Call Hedging
 
+\begin{table}[h!]
+\centering
+\begin{tabular}{c|l|l|l|l|l|l|l|}
+\cline{3-8}
+\multicolumn{2}{c|}{} & \multicolumn{2}{c|}{Training Set} & \multicolumn{2}{c|}{Validation Set} & \multicolumn{2}{c|}{Test Set} \\ \cline{2-8} 
+ & Premium & Mean & Std & Mean & Std & Mean & Std \\ \hline
+\multicolumn{1}{|c|}{Data} & 0.0413 & -0.002271 & 0.014906 & -0.016039 & 0.014768 & -0.014327 & 0.016627 \\ \hline
+\multicolumn{1}{|c|}{SBTS} & 0.04226749 & -0.001897 & 0.014832 & -0.015814 & 0.014964 & -0.012974 & 0.014302 \\ \hline
+\end{tabular}
+\caption{Mean of PnL and its Std (replication error).}
+\label{tab:pnl_results}
+\end{table}
+
 Empirical PnL distribution of the deep hedging
-strategy trained on SBTS-generated scenarios, evaluated on real GOOGL price data.
+strategy trained on SBTS-generated scenarios vs real GOOGL price data.
 
 ![PnL GOOGL](https://raw.githubusercontent.com/vuminh-hoangd/Deep-Hedging-SBTS/main/PnL-googl-test.png)
