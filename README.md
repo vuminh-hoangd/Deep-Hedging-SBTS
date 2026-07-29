@@ -55,7 +55,7 @@ which are then used to train the deep hedging model via a Deep Neural Network.
 | **Data** | 0.0413 | -0.002271 (0.014906) | -0.016039 (**0.014768**) | -0.014327 (0.016627) |
 | **SBTS** | 0.0422 | -0.001897 (0.014832) | **-0.015814** (0.014964) | **-0.012974** (**0.014302**) |
 
-Deep hedging model trained on Schrödinger Bridge synthetic samples, achieved **14\% lower replication error (PnL std)** and **reduced mean PnL bias by 9\% **vs. real-data-trained baseline **on out-of-sample backtests (test set)**.
+Deep hedging model trained on Schrödinger Bridge synthetic samples, achieved **14\% lower replication error (PnL std)** and **reduced mean PnL bias by 9\%** vs. real-data-trained baseline **on out-of-sample backtests (test set)**.
 
 - Empirical PnL distribution of the deep hedging
 strategy trained on SBTS-generated scenarios vs real GOOGL price data.
