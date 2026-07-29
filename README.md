@@ -36,6 +36,8 @@ hedge ratio (number of shares held) at time $`t_i`$, and $`g(S_T) = (S_T - S_0)^
 is the option payoff at maturity.
 Think of this as: **(money you have) = (money you started with) + (money you made/lost trading) − (money you have to pay out)**.
 
+A tighter PnL distribution centered near zero indicates a more accurate hedge, as it reflects lower replication error and reduced sensitivity to model misspecification.
+
 ## SBTS for Deep Hedging
 
 We use **SBTS to generate synthetic time series samples** of asset prices,
@@ -51,7 +53,7 @@ which are then used to train the deep hedging model via a Deep Neural Network.
 
 | Model | Premium | Training Set | Validation Set | Test Set |
 | :--- | :--- | :--- | :--- | :--- |
-| **Data** | 0.0413 | -0.002271 (0.014906) | -0.016039 (0.014768) | -0.014327 (0.016627) |
+| **Data** | 0.0413 | -0.002271 (0.014906) | -0.016039 (**0.014768**) | -0.014327 (0.016627) |
 | **SBTS** | 0.04226749 | -0.001897 (0.014832) | **-0.015814** (0.014964) | **-0.012974** (**0.014302**) |
 
 - Empirical PnL distribution of the deep hedging
