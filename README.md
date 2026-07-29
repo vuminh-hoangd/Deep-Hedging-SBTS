@@ -11,9 +11,8 @@ $$\min_{\alpha} \text{KL}(\mathbb{P} | \mathbb{W}^\sigma ) = \min_{\alpha}  \fra
 
 such that $dX_t = \alpha_t dt + \sigma dW_t^{\mathbb{P}}$ with $W$ a Brownian motion
 under $\mathbb{P}$, $X_0 = \mathbf{0}$, and
-$(X_{t_1}, \cdots, X_{t_N}) \overset{\mathbb{P}}{\sim} \mu$. Once we learn the optimal drift $\alpha^\star$, we can generate new time series samples via $\mathbb{P}^\star$: $dX_t = \alpha_t^\star dt + \sigma dW_t^{\mathbb{P}^\star}$ 
+$(X_{t_1}, \cdots, X_{t_N}) \overset{\mathbb{P}}{\sim} \mu$. Once we learn the optimal drift $\alpha^\star$, we can generate new time series samples via $\mathbb{P}^\star$: $dX_t = \alpha_t^\star dt + \sigma dW_t^{\mathbb{P}^\star}$.
 
-------
 ## Deep Hedging
 
 We consider the deep hedging of an ATM call option with payoff
@@ -41,3 +40,20 @@ Think of this as:
 
 > **(money you have) = (money you started with) + (money you made/lost trading) − (money you have to pay out)**
 
+## SBTS for Deep Hedging
+
+We use **SBTS to generate synthetic time series samples** of asset prices,
+which are then used to train the deep hedging model via a Deep Neural Network.
+
+The pipeline is:
+
+```math
+\text{Real price paths} \xrightarrow{\text{SBTS}} \text{Synthetic scenarios} \xrightarrow{\text{Deep Hedging}} \text{Optimal hedge } \Delta
+```
+
+### Results — Google (GOOGL) ATM Call Hedging
+
+Empirical PnL distribution of the deep hedging
+strategy trained on SBTS-generated scenarios, evaluated on real GOOGL price data.
+
+![PnL GOOGL](https://raw.githubusercontent.com/vuminh-hoangd/Deep-Hedging-SBTS/main/PnL-googl-test.png)
