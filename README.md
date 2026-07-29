@@ -7,7 +7,7 @@ $\mu \in \mathcal{P}((\mathbb{R}^d)^N)$ given real observations.
 
 The **Schrödinger Bridge Time Series (SBTS)** problem is formulated as:
 
-$$\min_{\alpha} \text{KL}(\mathbb{P} || \mathbb{W}^\sigma ) = \min_{\alpha}  \frac{1}{2} \mathbb{E}_{\mathbb{P}} \left[ \int_0^T \bigg|\frac{\alpha_t}{\sigma}\bigg|^2 \, dt \right]$$
+$$\min_{\alpha} \text{KL}(\mathbb{P} | \mathbb{W}^\sigma ) = \min_{\alpha}  \frac{1}{2} \mathbb{E}_{\mathbb{P}} \left[ \int_0^T \bigg|\frac{\alpha_t}{\sigma}\bigg|^2 \, dt \right]$$
 
 such that $dX_t = \alpha_t dt + \sigma dW_t^{\mathbb{P}}$ with $W$ a Brownian motion
 under $\mathbb{P}$, $X_0 = \mathbf{0}$, and
