@@ -23,7 +23,7 @@ The goal is to minimize over the initial capital $`p`$ (premium) and
 the parameters of the neural network $`\Delta`$ the **replication error**:
 
 ```math
-\min_{p, \Delta} \, \mathbb{E} \left| \text{PnL}^{p, \Delta} \right|^2
+\min_{p, \Delta} \, \mathbb{E} [\left| \text{PnL}^{p, \Delta} \right|]^2
 ```
 
 where the Profit and Loss is defined as:
@@ -32,10 +32,12 @@ where the Profit and Loss is defined as:
 \text{PnL}^{p, \Delta} = p + \sum_{i=0}^{N-1} \Delta(t_i, S_{t_i})(S_{t_{i+1}} - S_{t_i}) - g(S_T)
 ```
 
+where $`p`$ is the initial premium collected, $`\Delta(t_i, S_{t_i})`$ is the
+hedge ratio (number of shares held) at time $`t_i`$, and $`g(S_T) = (S_T - S_0)^+`$
+is the option payoff at maturity.
+
+
 Think of this as:
 
 > **(money you have) = (money you started with) + (money you made/lost trading) − (money you have to pay out)**
 
-where $`p`$ is the initial premium collected, $`\Delta(t_i, S_{t_i})`$ is the
-hedge ratio (number of shares held) at time $`t_i`$, and $`g(S_T) = (S_T - S_0)^+`$
-is the option payoff at maturity.
