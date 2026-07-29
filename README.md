@@ -15,7 +15,14 @@ $(X_{t_1}, \cdots, X_{t_N}) \overset{\mathbb{P}}{\sim} \mu$. Once we learn the o
 
 ## Deep Hedging
 
-We consider the deep hedging of an ATM call option with payoff
+We consider the deep hedging of an ATM call option with payoff```
+
+</details>
+
+---
+
+## References
+
 $`g(S_T) = (S_T - S_0)^+`$.
 
 The goal is to minimize over the initial capital $`p`$ (premium) and
@@ -54,7 +61,7 @@ which are then used to train the deep hedging model via a Deep Neural Network.
 | Model | Premium | Training Set | Validation Set | Test Set |
 | :--- | :--- | :--- | :--- | :--- |
 | **Data** | 0.0413 | -0.002271 (0.014906) | -0.016039 (**0.014768**) | -0.014327 (0.016627) |
-| **SBTS** | 0.04226749 | -0.001897 (0.014832) | **-0.015814** (0.014964) | **-0.012974** (**0.014302**) |
+| **SBTS** | 0.0422 | -0.001897 (0.014832) | **-0.015814** (0.014964) | **-0.012974** (**0.014302**) |
 
 - Empirical PnL distribution of the deep hedging
 strategy trained on SBTS-generated scenarios vs real GOOGL price data.
