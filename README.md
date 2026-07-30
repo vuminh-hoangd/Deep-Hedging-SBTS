@@ -21,7 +21,7 @@ The goal is to minimize over the initial capital $`p`$ (premium) and
 the parameters of the neural network $`\Delta`$ the **replication error**:
 
 ```math
-\min_{p, \Delta} \, \mathbb{E} [\left| \text{PnL}^{p, \Delta} \right|]^2
+\min_{p, \Delta} \, \mathbb{E} [\left| \text{PnL}^{p, \Delta} \right|^2]
 ```
 
 where the Profit and Loss is defined as:
