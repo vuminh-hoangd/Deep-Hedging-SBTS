@@ -1,8 +1,6 @@
 ## Schrödinger Bridge for Time Series (SBTS)
 
-Let $\mu$ be the distribution of a time series valued in $\mathbb{R}^d$,
-observed over a discrete time grid $`0 = t_0 < t_1 \cdots < t_N = T`$
-We construct a model generating time series samples following
+Let $\mu$ be the distribution of a time series valued in $\mathbb{R}^d$, observed over a discrete time grid $`0 = t_0 < t_1 \cdots < t_N = T`$. We construct a model generating time series samples following
 $\mu \in \mathcal{P}((\mathbb{R}^d)^N)$ given real observations.
 
 The **Schrödinger Bridge Time Series (SBTS)** problem is formulated as:
